@@ -3,7 +3,8 @@ import TotalBalanceBox from "@/components/TotalBalanceBox";
 import React from "react";
 
 const Home = () => {
-  const loggedIn = { firstName: "Sandy" };
+  const apiURL = "http://127.0.0.1:8000/api/user/";
+
   return (
     <section className="home">
       <div className="home-content">
@@ -11,7 +12,7 @@ const Home = () => {
           <HeaderBox
             type="greeting"
             title="Welcome"
-            user={loggedIn?.firstName || "Guest"}
+            apiUrl={apiURL}
             subtext="Access and manage your account and transactions efficiently"
           />
           <TotalBalanceBox
