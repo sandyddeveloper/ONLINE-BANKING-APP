@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Horizon: Financial SaaS Platform
 
-## Getting Started
+<div>
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=FD366E" alt="appwrite" />
+    <img src="https://img.shields.io/badge/-Django-black?style=for-the-badge&logoColor=white&logo=django&color=092E20" alt="django" />
+</div>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📋 Table of Contents
+- [🤖 Introduction](#-introduction)
+- [⚙️ Tech Stack](#%EF%B8%8F-tech-stack)
+- [🔋 Features](#-features)
+- [🤸 Quick Start](#-quick-start)
+- [🕸️ Code Snippets to Copy](#%EF%B8%8F-code-snippets-to-copy)
+- [🔗 Assets](#-assets)
+- [🚀 More](#-more)
+- [🚨 Tutorial](#%F0%9F%9A%A8-tutorial)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🤖 Introduction
+Vaulity is a financial SaaS platform built with Next.js, Django, and Appwrite, designed to simplify personal finance management. Users can connect multiple bank accounts, view real-time transactions, transfer funds, and manage their finances with ease.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is featured in a step-by-step tutorial on the JavaScript Mastery YouTube channel. Join the JSM family to learn how to build projects like these and more!
 
-## Learn More
+If you encounter any issues or need assistance, join our vibrant Discord community of over 34k+ members.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Tech Stack
+- **Next.js**
+- **TypeScript**
+- **TailwindCSS**
+- **Appwrite**
+- **Django**
+- **Plaid**
+- **Dwolla**
+- **React Hook Form**
+- **Zod**
+- **Chart.js**
+- **ShadCN**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔋 Features
+- **Authentication:** Secure SSR authentication with robust validations and authorization.
+- **Bank Integration:** Integrate with Plaid to link multiple bank accounts.
+- **Dashboard:** Displays a financial overview, including total balance, recent transactions, and categorized spending.
+- **Bank Management:** Lists connected banks with detailed account information.
+- **Transaction History:** Provides pagination and filtering for transaction records.
+- **Real-Time Updates:** Reflects changes dynamically when new accounts are added.
+- **Fund Transfers:** Enables secure fund transfers using Dwolla with required recipient details.
+- **Responsiveness:** Optimized for desktop, tablet, and mobile devices.
+- **Code Architecture:** Implements reusable and modular components.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤸 Quick Start
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-repo/horizon-financial-saas.git
+   ```
+2. **Navigate to the Directory:**
+   ```bash
+   cd horizon-financial-saas
+   ```
+3. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+4. **Run the Development Server:**
+   ```bash
+   npm run dev
+   ```
+5. **Set Up Backend:**
+   - Install Django and Appwrite.
+   - Configure API keys for Plaid and Dwolla.
+6. **Access the App:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🕸️ Code Snippets to Copy
+- Authentication Helper:
+   ```typescript
+   import { getSession } from 'next-auth/react';
+   export const authenticateUser = async () => {
+       const session = await getSession();
+       if (!session) throw new Error('User not authenticated');
+   };
+   ```
+
+- API Integration Example:
+   ```typescript
+   import axios from 'axios';
+   export const fetchTransactions = async (bankId: string) => {
+       const { data } = await axios.get(`/api/transactions/${bankId}`);
+       return data;
+   };
+   ```
+
+---
+
+## 🔗 Assets
+- **Logo:** [Download](#)
+- **UI Mockups:** [View](#)
+
+---
+
+## 🚀 More
+- **Follow us on [YouTube](https://www.youtube.com/@jsmastery).**
+- **Join our [Discord Community](https://discord.gg/jsmastery).**
+
+---
+
+## 🚨 Tutorial
+This repository contains the source code for an in-depth tutorial available on our YouTube channel. The tutorial guides you through the process of building this project step-by-step in a beginner-friendly manner. Perfect for visual learners!"
+}
