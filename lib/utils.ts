@@ -14,6 +14,7 @@ export interface User {
 }
 export interface Bank {
   $id: string;
+  id: string;
   name: string;
   accountNumber: string;
   balance: number;
