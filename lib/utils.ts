@@ -16,6 +16,7 @@ export interface Bank {
   $id: string;
   id: string;
   name: string;
+  mask: string;
   accountNumber: string;
   balance: number;
   branch: string;
