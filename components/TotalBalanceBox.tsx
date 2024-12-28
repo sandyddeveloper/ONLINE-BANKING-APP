@@ -33,6 +33,7 @@ const TotalBalanceBox: React.FC<TotalBalanceBoxProps> = ({ accounts }) => {
           number_of_accounts: data.number_of_accounts,
         });
       } catch (error) {
+        console.error("Error fetching user data:", error);
         setError("Failed to fetch user data.");
       } finally {
         setLoading(false);
