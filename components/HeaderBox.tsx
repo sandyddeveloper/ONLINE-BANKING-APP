@@ -1,36 +1,29 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { getUser } from "@/server/api";
 
 type HeaderBoxProps = {
   type?: "title" | "greeting";
   title: string;
   subtext?: string;
-  apiUrl: string;
 };
 
 const HeaderBox: React.FC<HeaderBoxProps> = ({
   type = "title",
   title,
   subtext = "",
-  apiUrl,
 }) => {
   const [firstName, setFirstName] = useState<string>("");
 
   useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await axios.get(apiUrl);
-        setFirstName(response.data.first_name);
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-        setFirstName("Guest");
-      }
+    const fetchUserData = async () => {
+      const userData = await getUser();
+      setFirstName(userData.first_name || "Guest");
     };
 
-    fetchUser();
-  }, [apiUrl]);
+    fetchUserData();
+  }, []);
 
   return (
     <div className="header-box">

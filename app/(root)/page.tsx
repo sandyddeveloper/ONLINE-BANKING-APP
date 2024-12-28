@@ -1,9 +1,10 @@
 import HeaderBox from "@/components/HeaderBox";
+import RightSidebar from "@/components/RightSidebar";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 import React from "react";
 
 const Home = () => {
-  const apiURL = "http://127.0.0.1:8000/api/user/";
+  const loggedIn = { firstname: "santhosh" };
 
   return (
     <section className="home">
@@ -12,16 +13,18 @@ const Home = () => {
           <HeaderBox
             type="greeting"
             title="Welcome"
-            apiUrl={apiURL}
             subtext="Access and manage your account and transactions efficiently"
           />
           <TotalBalanceBox
             accounts={[]}
-            totalBanks={1}
-            totalCurrentBalance={1250.65}
+            totalBanks={0}
+            totalCurrentBalance={0}
           />
         </header>
+        RECENT TRANSACTION
       </div>
+
+      <RightSidebar user={loggedIn} transactions={[]} banks={[{}, {}]} />
     </section>
   );
 };

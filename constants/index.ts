@@ -20,7 +20,7 @@ export const sidebarLinks = [
     label: "Transfer Funds",
   },
 ];
-
+export const apiURL = "";
 // good_user / good_password - Bank of America
 export const TEST_USER_ID = "6627ed3d00267aa6fa3e";
 

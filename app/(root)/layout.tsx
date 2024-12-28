@@ -7,16 +7,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const loggedIn = { firstName: "Santhosh", lastName: "Raj" };
+  const loggedIn = { firstName: "Santhosh", lastName: "Raj" }; // Replace with dynamic data if possible
+
   return (
     <main className="flex h-screen w-full font-inter">
-      <SideBar user={loggedIn} />
+      <SideBar />
 
       <div className="flex size-full flex-col">
         <div className="root-layout">
           <Image src="/icons/logo.svg" width={30} height={30} alt="logo" />
           <div>
-            <MobileNav user={loggedIn} />
+            <MobileNav />
           </div>
         </div>
         {children}
