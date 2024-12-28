@@ -17,6 +17,7 @@ export interface Bank {
   id: string;
   name: string;
   mask: string;
+  currentBalance: number;
   accountNumber: string;
   balance: number;
   branch: string;
