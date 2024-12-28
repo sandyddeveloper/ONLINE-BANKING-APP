@@ -7,8 +7,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const loggedIn = { firstName: "Santhosh", lastName: "Raj" }; // Replace with dynamic data if possible
-
   return (
     <main className="flex h-screen w-full font-inter">
       <SideBar />

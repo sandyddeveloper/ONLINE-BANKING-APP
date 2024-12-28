@@ -1,22 +1,17 @@
 "use client";
-
+import { User, Bank } from "@/lib/utils";
 import { getUser } from "@/server/api";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import BankCards from "./BankCards";
 
-type RightSidebarProps = {
-  user?: any;
-  transactions?: any[];
-  banks?: any[];
-};
+interface RightSidebarProps {
+  user: User;
+  banks?: Bank[];
+}
 
-const RightSidebar: React.FC<RightSidebarProps> = ({
-  user,
-  transactions,
-  banks = [],
-}) => {
+const RightSidebar: React.FC<RightSidebarProps> = ({ banks = [] }) => {
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -66,21 +61,20 @@ const RightSidebar: React.FC<RightSidebarProps> = ({
           </Link>
         </div>
 
-        {/* Check if 'banks' exists and has length */}
         {banks?.length ? (
           <div className="relative flex flex-1 flex-col items-center justify-center gap-5">
             <div className="relative z-10">
               <BankCards
-                key={banks[0].$id}
+                key={banks[0].id}
                 account={banks[0]}
-                userName={`${user.firstName} ${user.lastName}`}
+                userName={`${firstName} ${lastName}`}
                 showBalance={false}
               />
             </div>
             {banks[1] && (
               <div className="absolute right-0 top-8 z-0 w-[90%]">
                 <BankCards
-                  key={banks[1].$id}
+                  key={banks[1].id}
                   account={banks[1]}
                   userName={`${firstName} ${lastName}`}
                   showBalance={false}

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { formatAmount } from "@/lib/utils";
 import { getUser } from "@/server/api";
 import AnimatedCounter from "./AnimatedCounter";
 import DoughnutChart from "./DoughnutChart";
@@ -33,7 +32,7 @@ const TotalBalanceBox: React.FC<TotalBalanceBoxProps> = ({ accounts }) => {
           total_amount: data.total_amount,
           number_of_accounts: data.number_of_accounts,
         });
-      } catch (err) {
+      } catch (error) {
         setError("Failed to fetch user data.");
       } finally {
         setLoading(false);

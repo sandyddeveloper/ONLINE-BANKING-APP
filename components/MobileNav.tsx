@@ -12,7 +12,7 @@ import Link from "next/link";
 import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Dialog, DialogTitle } from "./ui/dialog";
+import { DialogTitle } from "./ui/dialog";
 
 const MobileNav = () => {
   const pathname = usePathname();

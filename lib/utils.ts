@@ -65,6 +65,21 @@ export const formatDateTime = (dateString: Date) => {
     timeOnly: formattedTime,
   };
 };
+export interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+}
+
+export interface Bank {
+  $id: string;
+  name: string;
+  accountNumber: string;
+  balance: number;
+  branch: string;
+  currency: string;
+}
 
 export function formatAmount(amount: number): string {
   const formatter = new Intl.NumberFormat("en-US", {
@@ -87,7 +102,14 @@ interface UrlQueryParams {
   key: string;
   value: string;
 }
+export interface AccountType {
+  id: string;
+  name: string;
+  mask: string;
+  currentBalance: number;
+}
 
+export interface Bank extends AccountType {}
 export function formUrlQuery({ params, key, value }: UrlQueryParams) {
   const currentUrl = qs.parse(params);
 
