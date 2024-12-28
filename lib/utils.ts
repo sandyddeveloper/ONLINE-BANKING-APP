@@ -6,6 +6,21 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+}
+export interface Bank {
+  $id: string;
+  name: string;
+  accountNumber: string;
+  balance: number;
+  branch: string;
+  currency: string;
+}
+
 export function getAccountTypeColors(type: AccountTypes) {
   switch (type) {
     case "depository":
