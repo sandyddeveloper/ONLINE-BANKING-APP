@@ -4,17 +4,22 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DoughnutChart = () => {
+type DoughnutChartProps = {
+  accounts: Account[];
+};
+
+const DoughnutChart: React.FC<DoughnutChartProps> = ({ accounts }) => {
   const data = {
     datasets: [
       {
         label: "Banks",
-        data: [1250, 2500, 3750],
+        data: accounts.map((account) => account.balance), // Assuming `balance` is a field in `Account`
         backgroundColor: ["#0747b6", "#2265d8", "#2f91fa"],
       },
     ],
-    labels: ["Bank 1", "Bank 2", "Bank 3"],
+    labels: accounts.map((account, index) => `Bank ${index + 1}`), // Custom labels for each bank
   };
+
   return (
     <Doughnut
       data={data}

@@ -58,6 +58,7 @@ declare type Account = {
   institutionId: string;
   name: string;
   type: string;
+  balance: string;
   subtype: string;
   appwriteItemId: string;
   shareableId: string;
@@ -211,7 +212,7 @@ declare interface TotalBalanceBoxProps {
 
 declare interface FooterProps {
   user: User;
-  type?: 'mobile' | 'desktop'
+  type?: "mobile" | "desktop";
 }
 
 declare interface RightSidebarProps {
