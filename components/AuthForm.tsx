@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const AuthForm = ({ type }: { type: string }) => {
-  const [user, setuser] = useState(null);
+  const [user] = useState(null);
   return (
     <section className="auth-form">
       <header className="flex flex-col gap-3 md:gap-8">
