@@ -18,7 +18,6 @@
 - [🕸️ Code Snippets to Copy](#%EF%B8%8F-code-snippets-to-copy)
 - [🔗 Assets](#-assets)
 - [🚀 More](#-more)
-- [🚨 Tutorial](#%F0%9F%9A%A8-tutorial)
 
 ---
 
