@@ -18,7 +18,6 @@
 - [🕸️ Code Snippets to Copy](#%EF%B8%8F-code-snippets-to-copy)
 - [🔗 Assets](#-assets)
 - [🚀 More](#-more)
-- [🚨 Tutorial](#%F0%9F%9A%A8-tutorial)
 
 ---
 
@@ -115,8 +114,4 @@ If you encounter any issues or need assistance, join our vibrant Discord communi
 - **Follow us on [YouTube](https://www.youtube.com/@jsmastery).**
 - **Join our [Discord Community](https://discord.gg/jsmastery).**
 
----
-
-## 🚨 Tutorial
-This repository contains the source code for an in-depth tutorial available on our YouTube channel. The tutorial guides you through the process of building this project step-by-step in a beginner-friendly manner. Perfect for visual learners!"
 }
