@@ -11,7 +11,6 @@ type TotalBalanceBoxProps = {
   totalBanks: number;
   totalCurrentBalance: number;
 };
-
 const TotalBalanceBox: React.FC<TotalBalanceBoxProps> = ({ accounts }) => {
   const [userData, setUserData] = useState<{
     total_amount: number;
