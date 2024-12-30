@@ -31,7 +31,7 @@ const AuthForm = ({ type }: { type: string }) => {
     setLoading(false);
   }
 
-  const [user, setuser] = useState(null);
+  const [user] = useState(null);
   const [isLoading, setLoading] = useState(false);
   return (
     <section className="auth-form">
